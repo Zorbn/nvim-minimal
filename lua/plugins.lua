@@ -6,11 +6,7 @@ end
 
 return require("packer").startup(function(use)
     use "wbthomason/packer.nvim"
-
-    use {
-	"zorbn/rider-dark.nvim",
-	requires = { "rktjmp/lush.nvim" }
-    }
+    use "zorbn/rider-dark.nvim"
 
     use {
         "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = function()
@@ -23,6 +19,7 @@ return require("packer").startup(function(use)
                 },
                 highlight = {
                     enable = true,
+                    additional_vim_regex_highlighting = false,
                 }
             }
         end

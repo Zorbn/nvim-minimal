@@ -1,7 +1,8 @@
-require("packages")
-vim.cmd("colorscheme rider_dark")
+require("plugins")
 
 vim.opt.termguicolors = true
+vim.cmd("colorscheme rider-dark")
+
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
@@ -30,4 +31,3 @@ vim.opt.listchars = vim.opt.listchars + "trail:ꞏ"
 -- Match terminal background color regardless of colorscheme
 -- vim.highlight.create("Normal", { guibg=0 }, false)
 -- vim.highlight.create("StatusLine", { guibg=0 }, false)
-
