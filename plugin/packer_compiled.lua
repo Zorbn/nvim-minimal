@@ -69,13 +69,13 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
-  ["lush.nvim"] = {
+  ["gourd.nvim"] = {
     loaded = true,
-    path = "C:\\Users\\Nic\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lush.nvim",
-    url = "https://github.com/rktjmp/lush.nvim"
+    path = "C:\\Users\\Nic\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gourd.nvim",
+    url = "https://github.com/zorbn/gourd.nvim"
   },
   ["nvim-treesitter"] = {
-    config = { "\27LJ\2\nÉ\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\14highlight\1\0\1\venable\2\21ensure_installed\1\0\0\1\f\0\0\6c\blua\15javascript\15typescript\fc_sharp\ago\trust\tjava\vkotlin\vpython\bcpp\nsetup\28nvim-treesitter.configs\frequire\0" },
+    config = { "\27LJ\2\nì\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\14highlight\1\0\2\venable\2&additional_vim_regex_highlighting\1\21ensure_installed\1\0\0\1\f\0\0\6c\blua\15javascript\15typescript\fc_sharp\ago\trust\tjava\vkotlin\vpython\bcpp\nsetup\28nvim-treesitter.configs\frequire\0" },
     loaded = true,
     path = "C:\\Users\\Nic\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
@@ -84,18 +84,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\Nic\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
-  },
-  ["rider-dark.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\Nic\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\rider-dark.nvim",
-    url = "https://github.com/zorbn/rider-dark.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
 -- Config for: nvim-treesitter
 time([[Config for nvim-treesitter]], true)
-try_loadstring("\27LJ\2\nÉ\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\14highlight\1\0\1\venable\2\21ensure_installed\1\0\0\1\f\0\0\6c\blua\15javascript\15typescript\fc_sharp\ago\trust\tjava\vkotlin\vpython\bcpp\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")
+try_loadstring("\27LJ\2\nì\1\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\14highlight\1\0\2\venable\2&additional_vim_regex_highlighting\1\21ensure_installed\1\0\0\1\f\0\0\6c\blua\15javascript\15typescript\fc_sharp\ago\trust\tjava\vkotlin\vpython\bcpp\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")
 time([[Config for nvim-treesitter]], false)
 if should_profile then save_profiles() end
 

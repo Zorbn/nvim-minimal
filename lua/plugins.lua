@@ -6,7 +6,7 @@ end
 
 return require("packer").startup(function(use)
     use "wbthomason/packer.nvim"
-    use "zorbn/rider-dark.nvim"
+    use "zorbn/gourd.nvim"
 
     use {
         "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = function()

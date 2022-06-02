@@ -1,7 +1,7 @@
 require("plugins")
 
 vim.opt.termguicolors = true
-vim.cmd("colorscheme rider-dark")
+vim.cmd("colorscheme gourd")
 
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
@@ -21,8 +21,8 @@ map = vim.api.nvim_set_keymap
 map("t", "<C-\\>", "<C-\\><C-n>", { noremap = true })
 
 -- GUI
-vim.g.neovide_refresh_rate = 165
-vim.opt.guifont = "mononoki:h11"
+-- vim.g.neovide_refresh_rate = 165
+-- vim.opt.guifont = "mononoki:h11"
 
 -- Highlight trailing whitespace
 vim.opt.list = true
