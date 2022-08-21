@@ -7,6 +7,8 @@ end
 return require("packer").startup(function(use)
     use "wbthomason/packer.nvim"
     use "zorbn/gourd.nvim"
+    use "navarasu/onedark.nvim"
+    use "Mofiqul/vscode.nvim"
 
     use {
         "nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = function()
