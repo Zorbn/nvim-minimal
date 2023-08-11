@@ -1,6 +1,6 @@
 {
-  "alabaster.nvim": { "branch": "main", "commit": "bacd899b8bc008619ce2bb85b576053f39a18588" },
-  "lazy.nvim": { "branch": "main", "commit": "dac844ed617dda4f9ec85eb88e9629ad2add5e05" },
+  "alabaster.nvim": { "branch": "main", "commit": "49864f478a2d33fdea93ca3523c475a7cc54b168" },
+  "lazy.nvim": { "branch": "main", "commit": "3ad55ae678876516156cca2f361c51f7952a924b" },
   "leap.nvim": { "branch": "main", "commit": "5efe985cf68fac3b6a6dfe7a75fbfaca8db2af9c" },
   "nvim-treesitter": { "branch": "master", "commit": "898f9c13d60bd51bdf873e284177f98264f0954f" },
   "vim-buftabline": { "branch": "master", "commit": "73b9ef5dcb6cdf6488bc88adb382f20bc3e3262a" },

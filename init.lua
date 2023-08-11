@@ -40,7 +40,7 @@ if not vim.loop.fs_stat(lazypath) then
     "clone",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
+    "--branch=stable",
     lazypath,
   })
 end
@@ -53,10 +53,14 @@ require("lazy").setup({
         config = function()
             require("nvim-treesitter.install").prefer_git = false
             require("nvim-treesitter.configs").setup {
+                ensure_installed = {
+                    "c", "lua", "vim", "vimdoc", "query", -- Overwrite the default nvim parsers with nvim-treesitter ones.
+                    "c_sharp", "cpp", "javascript", "typescript", -- Additional parsers.
+                },
                 highlight = {
                     enable = true,
                     additional_vim_regex_highlighting = false
-                }
+                },
             }
         end
     },
@@ -70,7 +74,7 @@ require("lazy").setup({
     "tpope/vim-repeat",
     "ap/vim-buftabline",
     {
-        url = "https://git.sr.ht/~zorbn/alabaster.nvim",
+        url = "https://git.sr.ht/~p00f/alabaster.nvim",
         config = function()
             vim.cmd("colorscheme alabaster")
         end
