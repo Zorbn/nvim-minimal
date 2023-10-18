@@ -4,11 +4,18 @@ vim.opt.tabstop = tab_width
 vim.opt.shiftwidth = tab_width
 vim.opt.softtabstop = tab_width
 vim.opt.expandtab = true
+vim.cmd([[
+augroup prewrites
+    autocmd!
+        autocmd BufWritePre * :exe 'keepjumps | norm m`' | %s/\s\+$//e | norm g``
+augroup END
+]])
 
 --[[ Aesthetics ]]--
 vim.opt.guifont = "Consolas:h10"
 vim.opt.number = true
 vim.opt.termguicolors = true
+vim.opt.cursorline = true
 
 --[[ Powershell ]]--
 if vim.fn.has("win32") then
@@ -71,26 +78,42 @@ require("lazy").setup({
     "ap/vim-buftabline",
     --[[ Aesthetics ]]--
     {
-        "Mofiqul/vscode.nvim",
+        "kaiuri/nvim-juliana",
         config = function()
-            require("vscode").load()
+            require("nvim-juliana").setup()
+            vim.cmd([[
+                colorscheme juliana
+                hi LineNr guifg=#a6adb9 guibg=#303841
+                hi CursorLineNr guifg=#d8dee9
+            ]])
         end
     },
     -- {
-    --     "crusoexia/vim-monokai",
+    --     "marko-cerovac/material.nvim",
     --     config = function()
-    --         vim.cmd [[
-    --             colorscheme monokai
+    --         vim.g.material_style = "palenight"
 
-    --             highlight! link Operator Normal
-    --             highlight! link Delimiter Normal
-    --             highlight! link Identifier Normal
-    --             highlight MatchParen guifg=NONE gui=underline
-    --             highlight! link @function.call Type
-    --         ]]
+    --         local colors = require("material.colors")
+    --         require("material").setup({
+    --             contrast = {
+    --                 terminal = true,
+    --                 sidebars = true,
+    --                 floating_windows = true,
+    --                 cursor_line = true,
+    --             },
+    --             custom_highlights = {
+    --                 TabLineFill = { bg = colors.editor.bg_alt },
+    --                 MsgArea = { bg = colors.editor.bg_alt },
+    --                 Normal = { fg = colors.editor.fg, bg = colors.editor.bg, sp = colors.editor.bg_alt }
+    --             },
+    --             custom_colors = function(colors)
+    --                 colors.editor.accent = colors.main.purple
+    --             end
+    --         })
+
+    --         vim.cmd("colorscheme material")
     --     end
     -- },
-
     --[[ Language integration ]]--
     {
         "williamboman/mason.nvim",
